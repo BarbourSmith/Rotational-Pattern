@@ -29,82 +29,12 @@
             "ioValues": []
         },
         {
-            "atomType": "Constant",
-            "name": "Constant",
-            "x": 0.41874084919472915,
-            "y": 0.16091954022988506,
-            "uniqueID": 132904,
-            "ioValues": [
-                {
-                    "name": "number",
-                    "ioValue": 10
-                }
-            ],
-            "evolve": false,
-            "min": 0,
-            "max": 20
-        },
-        {
-            "atomType": "Constant",
-            "name": "Constant",
-            "x": 0.3660322108345534,
-            "y": 0.29118773946360155,
-            "uniqueID": 238122,
-            "ioValues": [
-                {
-                    "name": "number",
-                    "ioValue": 20
-                }
-            ],
-            "evolve": false,
-            "min": 0,
-            "max": 20
-        },
-        {
             "atomType": "Input",
             "name": "Angle",
             "x": 0.013333333333333334,
-            "y": 0.5325670498084291,
+            "y": 0.4559386973180076,
             "uniqueID": 237670,
             "ioValues": []
-        },
-        {
-            "atomType": "Translate",
-            "name": "Translate",
-            "x": 0.2862371888726208,
-            "y": 0.4904214559386973,
-            "uniqueID": 854085,
-            "ioValues": [
-                {
-                    "name": "xDist",
-                    "ioValue": 50
-                },
-                {
-                    "name": "yDist",
-                    "ioValue": 0
-                },
-                {
-                    "name": "zDist",
-                    "ioValue": 0
-                }
-            ]
-        },
-        {
-            "atomType": "Rectangle",
-            "name": "Rectangle",
-            "x": 0.13030746705710103,
-            "y": 0.6053639846743295,
-            "uniqueID": 542458,
-            "ioValues": [
-                {
-                    "name": "x length",
-                    "ioValue": 100
-                },
-                {
-                    "name": "y length",
-                    "ioValue": 3
-                }
-            ]
         },
         {
             "atomType": "Code",
@@ -114,8 +44,12 @@
             "uniqueID": 212286,
             "ioValues": [
                 {
+                    "name": "GeometryToRotate",
+                    "ioValue": 10
+                },
+                {
                     "name": "Number",
-                    "ioValue": 20
+                    "ioValue": 10
                 },
                 {
                     "name": "Degrees",
@@ -142,38 +76,31 @@
     ],
     "allConnectors": [
         {
-            "ap1Name": "number",
-            "ap2Name": "Degrees",
-            "ap2Primary": false,
-            "ap1ID": 132904,
-            "ap2ID": 212286
-        },
-        {
-            "ap1Name": "number",
-            "ap2Name": "Number",
-            "ap2Primary": false,
-            "ap1ID": 238122,
-            "ap2ID": 212286
-        },
-        {
-            "ap1Name": "geometry",
+            "ap1Name": "number or geometry",
             "ap2Name": "GeometryToRotate",
             "ap2Primary": false,
-            "ap1ID": 854085,
+            "ap1ID": 933293,
             "ap2ID": 212286
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
-            "ap1ID": 542458,
-            "ap2ID": 854085
+            "ap1Name": "number or geometry",
+            "ap2Name": "Degrees",
+            "ap2Primary": false,
+            "ap1ID": 237670,
+            "ap2ID": 212286
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "number or geometry",
             "ap2Primary": false,
             "ap1ID": 212286
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Number",
+            "ap2Primary": false,
+            "ap1ID": 442607,
+            "ap2ID": 212286
         }
     ],
     "fileTypeVersion": 1,
