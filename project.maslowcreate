@@ -4,9 +4,30 @@
     "x": 0,
     "y": 0,
     "uniqueID": 755674,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "Input243128",
+            "ioValue": 10
+        },
+        {
+            "name": "Input774762",
+            "ioValue": 10
+        },
+        {
+            "name": "Input445634",
+            "ioValue": 10
+        }
+    ],
     "topLevel": true,
     "allAtoms": [
+        {
+            "atomType": "Input",
+            "name": "Input774762",
+            "x": 0.013333333333333334,
+            "y": 0.2720306513409962,
+            "uniqueID": 933293,
+            "ioValues": []
+        },
         {
             "atomType": "Constant",
             "name": "Constant",
@@ -32,12 +53,20 @@
             "ioValues": [
                 {
                     "name": "number",
-                    "ioValue": 10
+                    "ioValue": 20
                 }
             ],
             "evolve": false,
             "min": 0,
             "max": 20
+        },
+        {
+            "atomType": "Input",
+            "name": "Input243128",
+            "x": 0.013333333333333334,
+            "y": 0.5325670498084291,
+            "uniqueID": 237670,
+            "ioValues": []
         },
         {
             "atomType": "Translate",
@@ -80,20 +109,28 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.5307467057101025,
-            "y": 0.43295019157088127,
+            "x": 0.5314787701317716,
+            "y": 0.4444444444444444,
             "uniqueID": 212286,
             "ioValues": [
                 {
                     "name": "Number",
-                    "ioValue": 10
+                    "ioValue": 20
                 },
                 {
                     "name": "Degrees",
                     "ioValue": 10
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  return GeometryToRotate;\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      partsArray.push(GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n  }\n  \n  return Assembly(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
+        },
+        {
+            "atomType": "Input",
+            "name": "Input445634",
+            "x": 0.013333333333333334,
+            "y": 0.7164750957854406,
+            "uniqueID": 442607,
+            "ioValues": []
         },
         {
             "atomType": "Output",
@@ -131,6 +168,12 @@
             "ap2Primary": true,
             "ap1ID": 542458,
             "ap2ID": 854085
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 212286
         }
     ],
     "fileTypeVersion": 1,
