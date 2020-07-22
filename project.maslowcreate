@@ -1,25 +1,139 @@
 {
-    "molecules": [
+    "atomType": "Molecule",
+    "name": "Rotational Pattern",
+    "x": 0,
+    "y": 0,
+    "uniqueID": 755674,
+    "ioValues": [],
+    "topLevel": true,
+    "allAtoms": [
         {
-            "atomType": "Molecule",
-            "name": "Rotational Pattern",
-            "x": 0,
-            "y": 0,
-            "uniqueID": 755674,
-            "ioValues": [],
-            "topLevel": true,
-            "allAtoms": [
+            "atomType": "Constant",
+            "name": "Constant",
+            "x": 0.41874084919472915,
+            "y": 0.16091954022988506,
+            "uniqueID": 132904,
+            "ioValues": [
                 {
-                    "atomType": "Output",
-                    "name": "Output",
-                    "x": 954,
-                    "y": 164,
-                    "ioValues": []
+                    "name": "number",
+                    "ioValue": 10
                 }
             ],
-            "allConnectors": [],
-            "fileTypeVersion": 1
+            "evolve": false,
+            "min": 0,
+            "max": 20
+        },
+        {
+            "atomType": "Constant",
+            "name": "Constant",
+            "x": 0.3660322108345534,
+            "y": 0.29118773946360155,
+            "uniqueID": 238122,
+            "ioValues": [
+                {
+                    "name": "number",
+                    "ioValue": 10
+                }
+            ],
+            "evolve": false,
+            "min": 0,
+            "max": 20
+        },
+        {
+            "atomType": "Translate",
+            "name": "Translate",
+            "x": 0.2862371888726208,
+            "y": 0.4904214559386973,
+            "uniqueID": 854085,
+            "ioValues": [
+                {
+                    "name": "xDist",
+                    "ioValue": 50
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ]
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.13030746705710103,
+            "y": 0.6053639846743295,
+            "uniqueID": 542458,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 100
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 3
+                }
+            ]
+        },
+        {
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.5307467057101025,
+            "y": 0.43295019157088127,
+            "uniqueID": 212286,
+            "ioValues": [
+                {
+                    "name": "Number",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Degrees",
+                    "ioValue": 10
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  return GeometryToRotate;\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
+        },
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.9978038067349926,
+            "y": 0.5210727969348659,
+            "ioValues": []
         }
     ],
+    "allConnectors": [
+        {
+            "ap1Name": "number",
+            "ap2Name": "Degrees",
+            "ap2Primary": false,
+            "ap1ID": 132904,
+            "ap2ID": 212286
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "Number",
+            "ap2Primary": false,
+            "ap1ID": 238122,
+            "ap2ID": 212286
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "GeometryToRotate",
+            "ap2Primary": false,
+            "ap1ID": 854085,
+            "ap2ID": 212286
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 542458,
+            "ap2ID": 854085
+        }
+    ],
+    "fileTypeVersion": 1,
+    "filetypeVersion": 1,
     "circleSegmentSize": 2
 }
