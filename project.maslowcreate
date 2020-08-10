@@ -6,15 +6,15 @@
     "uniqueID": 755674,
     "ioValues": [
         {
-            "name": "Geometry",
-            "ioValue": 10
-        },
-        {
             "name": "Angle",
             "ioValue": 10
         },
         {
             "name": "Number",
+            "ioValue": 10
+        },
+        {
+            "name": "Shape",
             "ioValue": 10
         }
     ],
@@ -22,10 +22,10 @@
     "allAtoms": [
         {
             "atomType": "Input",
-            "name": "Geometry",
+            "name": "Shape",
             "x": 0.013333333333333334,
-            "y": 0.2720306513409962,
-            "uniqueID": 933293,
+            "y": 0.2681992337164751,
+            "uniqueID": 422066,
             "ioValues": []
         },
         {
@@ -34,6 +34,14 @@
             "x": 0.013333333333333334,
             "y": 0.4559386973180076,
             "uniqueID": 237670,
+            "ioValues": []
+        },
+        {
+            "atomType": "Input",
+            "name": "Number",
+            "x": 0.013333333333333334,
+            "y": 0.6168582375478927,
+            "uniqueID": 442607,
             "ioValues": []
         },
         {
@@ -59,14 +67,6 @@
             "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      partsArray.push(GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n      console.log(i);\n  }\n  \n  return Assembly(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
         },
         {
-            "atomType": "Input",
-            "name": "Number",
-            "x": 0.013333333333333334,
-            "y": 0.7164750957854406,
-            "uniqueID": 442607,
-            "ioValues": []
-        },
-        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9978038067349926,
@@ -79,7 +79,7 @@
             "ap1Name": "number or geometry",
             "ap2Name": "GeometryToRotate",
             "ap2Primary": false,
-            "ap1ID": 933293,
+            "ap1ID": 422066,
             "ap2ID": 212286
         },
         {
@@ -90,17 +90,17 @@
             "ap2ID": 212286
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "number or geometry",
-            "ap2Primary": false,
-            "ap1ID": 212286
-        },
-        {
             "ap1Name": "number or geometry",
             "ap2Name": "Number",
             "ap2Primary": false,
             "ap1ID": 442607,
             "ap2ID": 212286
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 212286
         }
     ],
     "fileTypeVersion": 1,
