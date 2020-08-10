@@ -6,15 +6,15 @@
     "uniqueID": 755674,
     "ioValues": [
         {
+            "name": "Shape",
+            "ioValue": 10
+        },
+        {
             "name": "Angle",
             "ioValue": 10
         },
         {
             "name": "Number",
-            "ioValue": 10
-        },
-        {
-            "name": "Shape",
             "ioValue": 10
         }
     ],
@@ -64,7 +64,7 @@
                     "ioValue": 10
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      partsArray.push(GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n      console.log(i);\n  }\n  \n  return Assembly(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  Number = parseInt(Number);\n  Degrees = parseInt(Degrees);\n  var partsArray = [];\n  var i = 0;\n  console.log(\"Beginning while loop\");\n  while(i <= Number){\n      partsArray.push(GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n      console.log(i);\n  }\n  \n  return Assembly(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
         },
         {
             "atomType": "Output",
