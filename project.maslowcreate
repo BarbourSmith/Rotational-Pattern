@@ -11,11 +11,11 @@
         },
         {
             "name": "Angle",
-            "ioValue": 40
+            "ioValue": 30
         },
         {
             "name": "Number",
-            "ioValue": 4
+            "ioValue": 3
         }
     ],
     "topLevel": true,
@@ -53,52 +53,18 @@
             "ioValues": [
                 {
                     "name": "GeometryToRotate",
-                    "ioValue": "atoms/755674/830485Extrude"
+                    "ioValue": 10
                 },
                 {
                     "name": "Number",
-                    "ioValue": 4
+                    "ioValue": 3
                 },
                 {
                     "name": "Degrees",
-                    "ioValue": 40
+                    "ioValue": 30
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  Number = parseInt(Number);\n  Degrees = parseInt(Degrees);\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      console.log(i)\n      partsArray.push( GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n  }\n  \n  return Group(partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
-        },
-        {
-            "atomType": "Rectangle",
-            "name": "Rectangle",
-            "x": 0.22694300518134716,
-            "y": 0.7938931297709924,
-            "uniqueID": 963634,
-            "ioValues": [
-                {
-                    "name": "x length",
-                    "ioValue": 10
-                },
-                {
-                    "name": "y length",
-                    "ioValue": 10
-                }
-            ]
-        },
-        {
-            "atomType": "Extrude",
-            "name": "Extrude",
-            "x": 0.43005181347150256,
-            "y": 0.816793893129771,
-            "uniqueID": 830485,
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": "atoms/755674/963634Rectangle"
-                },
-                {
-                    "name": "height",
-                    "ioValue": 10
-                }
-            ]
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  Number = parseInt(Number);\n  Degrees = parseInt(Degrees);\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      console.log(i)\n      partsArray.push( GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n  }\n  \n  console.log(Group(...partsArray));\n  \n  return Group(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
         },
         {
             "atomType": "Output",
@@ -115,6 +81,13 @@
         }
     ],
     "allConnectors": [
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "GeometryToRotate",
+            "ap2Primary": false,
+            "ap1ID": 422066,
+            "ap2ID": 212286
+        },
         {
             "ap1Name": "number or geometry",
             "ap2Name": "Degrees",
@@ -135,20 +108,6 @@
             "ap2Primary": false,
             "ap1ID": 212286,
             "ap2ID": 362431
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
-            "ap1ID": 963634,
-            "ap2ID": 830485
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "GeometryToRotate",
-            "ap2Primary": false,
-            "ap1ID": 830485,
-            "ap2ID": 212286
         }
     ],
     "fileTypeVersion": 1,
