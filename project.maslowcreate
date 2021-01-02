@@ -64,7 +64,7 @@
                     "ioValue": 30
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  Number = parseInt(Number);\n  Degrees = parseInt(Degrees);\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      console.log(i)\n      partsArray.push( GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n  }\n  \n  console.log(Group(...partsArray));\n  \n  return Group(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  Number = parseInt(Number);\n  Degrees = parseInt(Degrees);\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      partsArray.push( GeometryToRotate.rotateZ(i*Degrees));\n      i++;\n  }\n  \n  return Group(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
         },
         {
             "atomType": "Output",
