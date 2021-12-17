@@ -47,8 +47,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.5316062176165803,
-            "y": 0.3778625954198473,
+            "x": 0.47949735449735453,
+            "y": 0.41025641025641024,
             "uniqueID": 212286,
             "ioValues": [
                 {
@@ -64,7 +64,7 @@
                     "ioValue": 60
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(GeometryToRotate, Number, Degrees){\n  if(GeometryToRotate == 10){\n      GeometryToRotate = Arc(10).ex(5).move(30,0,0);\n  }\n  \n  Number = parseInt(Number);\n  Degrees = parseInt(Degrees);\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      partsArray.push( GeometryToRotate.rz(i*(Degrees/360)));\n      i++;\n  }\n  \n  return Group(...partsArray);\n}\n\nreturn main(GeometryToRotate, Number, Degrees)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[GeometryToRotate, Number, Degrees];\n\n  if(GeometryToRotate == 10){\n      GeometryToRotate = Arc(10).ex(5).move(30,0,0);\n  }\n  \n  Number = parseInt(Number);\n  Degrees = parseInt(Degrees);\n  var partsArray = [];\n  var i = 0;\n  while(i <= Number){\n      partsArray.push( GeometryToRotate.rz(i*(Degrees/360)));\n      i++;\n  }\n  \n  return Group(...partsArray);"
         },
         {
             "atomType": "Output",
@@ -112,6 +112,7 @@
     ],
     "fileTypeVersion": 1,
     "simplify": false,
+    "unitsIndex": 0,
     "filetypeVersion": 1,
     "circleSegmentSize": 2
 }
